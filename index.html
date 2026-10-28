@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentation Library | #EduLab</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f7fa;color:#24364a}
+header{background:linear-gradient(120deg,#123e63,#287b9c);color:white;padding:55px 20px;text-align:center}
+header h1{font-size:clamp(26px,4vw,42px);margin:0 0 12px}
+header p{font-size:17px;line-height:1.6}
+main{max-width:1050px;margin:35px auto;padding:0 20px}
+h2{color:#174e72}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:white;border-radius:15px;padding:26px;box-shadow:0 4px 18px #173b5318}
+.card h3{margin-top:0}
+.card p{line-height:1.6;color:#526579}
+.btn{display:inline-block;background:#176c91;color:white;padding:12px 20px;border-radius:8px;text-decoration:none}
+.btn:hover{background:#104e6a}
+footer{text-align:center;padding:30px;color:#526579;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+<h1>Presentation Library</h1>
+<p>Kindergarten "Svetulka" – Shumen, Bulgaria</p>
+<p>#EduLab Project | Erasmus+ Programme</p>
+</header>
+<main>
+<h2>Presentations in English</h2>
+<p>Educational resources presenting professional experiences, innovative pedagogical practices and outcomes of international learning activities within the Erasmus+ project.</p>
+<div class="grid" id="presentations"></div>
+</main>
+<footer>
+<p>Kindergarten "Svetulka" – Shumen | #EduLab</p>
+<p>2025-1-BG01-KA122-SCH-000334045</p>
+<p>Funded by the European Union</p>
+</footer>
+<script>
+const presentations = [];
+const container = document.getElementById("presentations");
+if (presentations.length === 0) {
+  container.innerHTML = '<p>Presentations will be published soon.</p>';
+}
+presentations.forEach(item => {
+  const card = document.createElement("article");
+  card.className = "card";
+  const title = document.createElement("h3");
+  title.textContent = item.title;
+  const desc = document.createElement("p");
+  desc.textContent = item.description;
+  const link = document.createElement("a");
+  link.className = "btn";
+  link.href = item.file;
+  link.textContent = "View presentation";
+  card.append(title, desc, link);
+  container.appendChild(card);
+});
+</script>
+</body>
+</html>
