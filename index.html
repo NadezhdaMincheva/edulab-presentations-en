@@ -1,69 +1,52 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Presentation Library | #EduLab</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f3f7fa;color:#24364a}
-header{background:linear-gradient(120deg,#123e63,#287b9c);color:white;padding:55px 20px;text-align:center}
-header h1{font-size:clamp(26px,4vw,42px);margin:0 0 12px}
-header p{font-size:17px;line-height:1.6}
-main{max-width:1050px;margin:35px auto;padding:0 20px}
-h2{color:#174e72}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.card{background:white;border-radius:15px;padding:26px;box-shadow:0 4px 18px #173b5318}
-.card h3{margin-top:0}
-.card p{line-height:1.6;color:#526579}
-.btn{display:inline-block;background:#176c91;color:white;padding:12px 20px;border-radius:8px;text-decoration:none}
-.btn:hover{background:#104e6a}
-footer{text-align:center;padding:30px;color:#526579;font-size:14px}
-</style>
-</head>
-<body>
-<header>
-<h1>Presentation Library</h1>
-<p>Kindergarten "Svetulka" – Shumen, Bulgaria</p>
-<p>#EduLab Project | Erasmus+ Programme</p>
-</header>
-<main>
-<h2>Presentations in English</h2>
-<p>Educational resources presenting professional experiences, innovative pedagogical practices and outcomes of international learning activities within the Erasmus+ project.</p>
-<div class="grid" id="presentations"></div>
-</main>
-<footer>
-<p>Kindergarten "Svetulka" – Shumen | #EduLab</p>
-<p>2025-1-BG01-KA122-SCH-000334045</p>
-<p>Funded by the European Union</p>
-</footer>
-<script>
-const presentations = [
-  {
-    title: "From European Experience to Educational Practice – Early Childhood Development and Inclusion",
-    description: "Professional job-shadowing experience in Chipiona, Spain. Presentation by PhD Nadia Nikolova, Kindergarten Svetulka, Shumen, Bulgaria.",
-    file: "Nadya_Nikolova_Job_shadowing_Spain.html"
-  }
-];
-const container = document.getElementById("presentations");
-if (presentations.length === 0) {
-  container.innerHTML = '<p>Presentations will be published soon.</p>';
-}
-presentations.forEach(item => {
-  const card = document.createElement("article");
-  card.className = "card";
-  const title = document.createElement("h3");
-  title.textContent = item.title;
-  const desc = document.createElement("p");
-  desc.textContent = item.description;
-  const link = document.createElement("a");
-  link.className = "btn";
-  link.href = item.file;
-  link.textContent = "View presentation";
-  card.append(title, desc, link);
-  container.appendChild(card);
-});
-</script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>#EduLab | Educational Resource Library</title><style>:root{color-scheme:light;--ink:#182b40;--blue:#1e648b;--line:#dbe5ed;--pale:#f3f7fa}*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.5 system-ui,Segoe UI,Arial,sans-serif}header{background:linear-gradient(125deg,#143c5b,#267a9c);color:white;padding:52px max(24px,calc((100vw - 1040px)/2)) 44px}.eyebrow{letter-spacing:.14em;font-size:12px;font-weight:750;text-transform:uppercase;opacity:.85}h1{font-size:clamp(29px,4vw,48px);margin:10px 0 6px;line-height:1.15}header p{max-width:680px;opacity:.94;margin:12px 0 0}main{max-width:1080px;margin:0 auto;padding:28px 20px 70px}.intro{display:flex;justify-content:space-between;gap:18px;align-items:center;margin:0 0 22px}.intro p{margin:0;color:#476075}.total{white-space:nowrap;font-weight:750;color:var(--blue)}.activity{background:#fff;border:1px solid var(--line);border-radius:15px;margin:14px 0;overflow:hidden;box-shadow:0 3px 12px #2039500a}summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:16px;padding:22px 24px}summary::-webkit-details-marker{display:none}.circle{background:#e5f0f6;color:#236e93;border-radius:11px;padding:11px;font-weight:800}.summarytext{display:grid;flex:1;gap:4px}.summarytext strong{font-size:19px}.summarytext small{color:#5b7080;font-size:13px}.count{color:#547084;font-size:13px;white-space:nowrap}.chev{font-size:23px;transition:transform .2s}details[open] .chev{transform:rotate(180deg)}ol{list-style:none;margin:0;padding:4px 22px 20px;border-top:1px solid var(--line)}li a{display:flex;align-items:center;gap:16px;padding:13px 7px;color:#183e5c;text-decoration:none;border-bottom:1px solid #eef2f5}li:last-child a{border:0}li a:hover,li a:focus{background:#f2f8fb;color:#075f91;outline-offset:2px}.num{font-weight:750;color:#1c749c;min-width:104px}.arr{margin-left:auto}footer{color:#5e7180;font-size:13px;margin-top:30px;text-align:center}@media(max-width:600px){summary{padding:16px;gap:10px}.summarytext strong{font-size:15px}.summarytext small{display:none}.count{font-size:11px}.num{min-width:58px}ol{padding:4px 10px 14px}li a{gap:10px;font-size:14px}}</style></head><body><header><div class="eyebrow">Erasmus+ KA122-SCH · 2025–2026</div><h1>#EduLab Educational Resource Library</h1><p>Educational Laboratory for Teachers · Svetulka Kindergarten, Shumen, Bulgaria</p></header><main><div class="intro"><p>Explore the presentations by project activity. Select a section to expand the list, then open any presentation.</p><span class="total">55 resources</span></div><details class="activity" open=""><summary><span class="circle">01</span><span class="summarytext"><strong>Artificial Intelligence and Digital Educational Resources</strong><small>AI tools and digital resources for teaching and learning</small></span><span class="count">13 resources</span><span class="chev">⌄</span></summary><ol><li><a href="1.0 - EduLab - Educational Laboratory for Teachers.html" rel="noopener" target="_blank"><span class="num">1.0</span><span>EduLab - Educational Laboratory for Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.1 - How to Make Full Use of Artificial Intelligence.html" rel="noopener" target="_blank"><span class="num">1.1</span><span>How to Make Full Use of Artificial Intelligence</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.2 - EduLab Copilot - Intelligent Assistant for Kindergarten Teachers.html" rel="noopener" target="_blank"><span class="num">1.2</span><span>EduLab Copilot - Intelligent Assistant for Kindergarten Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.3 - AI in Kindergarten.html" rel="noopener" target="_blank"><span class="num">1.3</span><span>AI in Kindergarten</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.4 - Sharing Good Practices - Artificial Intelligence in Education.html" rel="noopener" target="_blank"><span class="num">1.4</span><span>Sharing Good Practices - Artificial Intelligence in Education</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.5 - Practical Activities with Children in Kindergarten.html" rel="noopener" target="_blank"><span class="num">1.5</span><span>Practical Activities with Children in Kindergarten</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.6 - Training Presentation on Artificial Intelligence.html" rel="noopener" target="_blank"><span class="num">1.6</span><span>Training Presentation on Artificial Intelligence</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.7 - Presentation for Colleagues on Artificial Intelligence.html" rel="noopener" target="_blank"><span class="num">1.7</span><span>Presentation for Colleagues on Artificial Intelligence</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.8 - Presentation for Parents on Artificial Intelligence.html" rel="noopener" target="_blank"><span class="num">1.8</span><span>Presentation for Parents on Artificial Intelligence</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.9 - Presentation After the AI Training Course.html" rel="noopener" target="_blank"><span class="num">1.9</span><span>Presentation After the AI Training Course</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.10 - Cultural Programme in Turkey.html" rel="noopener" target="_blank"><span class="num">1.10</span><span>Cultural Programme in Turkey</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.11 - Educational Resources Shared with Colleagues.html" rel="noopener" target="_blank"><span class="num">1.11</span><span>Educational Resources Shared with Colleagues</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="1.12 - Educational Resources for Parents.html" rel="noopener" target="_blank"><span class="num">1.12</span><span>Educational Resources for Parents</span><span aria-hidden="true" class="arr">↗</span></a></li></ol></details><details class="activity"><summary><span class="circle">02</span><span class="summarytext"><strong>STEAM Education and LEGO</strong><small>STEAM learning through exploration, construction and play</small></span><span class="count">16 resources</span><span class="chev">⌄</span></summary><ol><li><a href="2.0 - Bulgaria - A Country with a Thousand Years of History.html" rel="noopener" target="_blank"><span class="num">2.0</span><span>Bulgaria - A Country with a Thousand Years of History</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.1 - Finland - Introduction.html" rel="noopener" target="_blank"><span class="num">2.1</span><span>Finland - Introduction</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.2 - Finland - LEGO DUPLO.html" rel="noopener" target="_blank"><span class="num">2.2</span><span>Finland - LEGO DUPLO</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.3 - STEAM Education in Finland.html" rel="noopener" target="_blank"><span class="num">2.3</span><span>STEAM Education in Finland</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.4 - STEAM and LEGO for Teachers.html" rel="noopener" target="_blank"><span class="num">2.4</span><span>STEAM and LEGO for Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.5 - STEAM and LEGO - Presentation for Teachers.html" rel="noopener" target="_blank"><span class="num">2.5</span><span>STEAM and LEGO - Presentation for Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.6 - Finland - STEAM Practices for Teachers.html" rel="noopener" target="_blank"><span class="num">2.6</span><span>Finland - STEAM Practices for Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.7 - Finland - Activities with Children.html" rel="noopener" target="_blank"><span class="num">2.7</span><span>Finland - Activities with Children</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.8 - Finland - STEAM Activities with Children.html" rel="noopener" target="_blank"><span class="num">2.8</span><span>Finland - STEAM Activities with Children</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.9 - STEAM and LEGO - Activities with Children.html" rel="noopener" target="_blank"><span class="num">2.9</span><span>STEAM and LEGO - Activities with Children</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.10 - Finland - Activities with Parents.html" rel="noopener" target="_blank"><span class="num">2.10</span><span>Finland - Activities with Parents</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.11 - Finland - STEAM Activities with Parents.html" rel="noopener" target="_blank"><span class="num">2.11</span><span>Finland - STEAM Activities with Parents</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.12 - STEAM and LEGO - Activities for Parents.html" rel="noopener" target="_blank"><span class="num">2.12</span><span>STEAM and LEGO - Activities for Parents</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.13_-_STEAM_with_Construction_Activities_-_Parent_Training.html" rel="noopener" target="_blank"><span class="num">2.13</span><span>- STEAM with Construction Activities - Parent Training</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="2.14 - STEAM with Construction Activities in Kindergarten - LEGO DUPLO.html" rel="noopener" target="_blank"><span class="num">2.14</span><span>STEAM with Construction Activities in Kindergarten - LEGO DUPLO</span><span aria-hidden="true" class="arr">↗</span></a></li><li><a href="2.4_-_STEAM_with_Construction_Activities_in_Kindergarten_-_LEGO_Education.html" rel="noopener" target="_blank"><span class="num">Extra</span><span>STEAM with Construction Activities in Kindergarten – LEGO Education</span><span aria-hidden="true" class="arr">↗</span></a></li></ol></details><details class="activity"><summary><span class="circle">03</span><span class="summarytext"><strong>Social-Emotional Learning, Inclusion and Innovative Practices</strong><small>Inclusive education, well-being and innovative pedagogical approaches</small></span><span class="count">12 resources</span><span class="chev">⌄</span></summary><ol><li><a href="3.0 - Bulgaria - A Country with a Thousand Years of History.html" rel="noopener" target="_blank"><span class="num">3.0</span><span>Bulgaria - A Country with a Thousand Years of History</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.1 - Presentation for Colleagues.html" rel="noopener" target="_blank"><span class="num">3.1</span><span>Presentation for Colleagues</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.2 - Presentation after Training.html" rel="noopener" target="_blank"><span class="num">3.2</span><span>Presentation after Training</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.3 - Training in Spain.html" rel="noopener" target="_blank"><span class="num">3.3</span><span>Training in Spain</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.4 - Training for Colleagues.html" rel="noopener" target="_blank"><span class="num">3.4</span><span>Training for Colleagues</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.5 - Presentation for Colleagues.html" rel="noopener" target="_blank"><span class="num">3.5</span><span>Presentation for Colleagues</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.6 - Presentation for Parents.html" rel="noopener" target="_blank"><span class="num">3.6</span><span>Presentation for Parents</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.7 - Presentation for Parents - Part 2.html" rel="noopener" target="_blank"><span class="num">3.7</span><span>Presentation for Parents - Part 2</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.8 - Activities with Children at Svetulka Kindergarten.html" rel="noopener" target="_blank"><span class="num">3.8</span><span>Activities with Children at Svetulka Kindergarten</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.9 - Activities with Nursery Children (Ages 0–3).html" rel="noopener" target="_blank"><span class="num">3.9</span><span>Activities with Nursery Children (Ages 0–3)</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="3.10 - Presentation for Children.html" rel="noopener" target="_blank"><span class="num">3.10</span><span>Presentation for Children</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="Nadya_Nikolova_Job_shadowing_Spain.html" rel="noopener" target="_blank"><span class="num">Additional resource</span><span>Nadya Nikolova – Job Shadowing in Spain</span><span aria-hidden="true" class="arr">↗</span></a></li></ol></details><details class="activity"><summary><span class="circle">04</span><span class="summarytext"><strong>Quality in Early Childhood Education and Care</strong><small>Improving educational practices and care in early childhood</small></span><span class="count">14 resources</span><span class="chev">⌄</span></summary><ol><li><a href="4.0 - Bulgaria - A Country with a Thousand Years of History.html" rel="noopener" target="_blank"><span class="num">4.0</span><span>Bulgaria - A Country with a Thousand Years of History</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.1 - Presentation for Colleagues - Part 1.html" rel="noopener" target="_blank"><span class="num">4.1</span><span>Presentation for Colleagues - Part 1</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.2 - Presentation for Colleagues - Part 2.html" rel="noopener" target="_blank"><span class="num">4.2</span><span>Presentation for Colleagues - Part 2</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.3 - Presentation for Colleagues - Part 3.html" rel="noopener" target="_blank"><span class="num">4.3</span><span>Presentation for Colleagues - Part 3</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.4_-_Preschool_Education_and_Care_-_Social_Emotional_Learning_and_Inclusion.html" rel="noopener" target="_blank"><span class="num">4.4</span><span>- Preschool Education and Care - Social Emotional Learning and Inclusion</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.5_-_Preschool_Education_and_Care_-_Innovative_Practices.html" rel="noopener" target="_blank"><span class="num">4.5</span><span>- Preschool Education and Care - Innovative Practices</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.6_-_Job_Shadowing_in_Brno_-_Educational_Practices.html" rel="noopener" target="_blank"><span class="num">4.6</span><span>- Job Shadowing in Brno - Educational Practices</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.7 - Training Presentation for Teachers.html" rel="noopener" target="_blank"><span class="num">4.7</span><span>Training Presentation for Teachers</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.8 - Presentation for Parents - Part 1.html" rel="noopener" target="_blank"><span class="num">4.8</span><span>Presentation for Parents - Part 1</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.9 - Presentation for Parents - Part 2.html" rel="noopener" target="_blank"><span class="num">4.9</span><span>Presentation for Parents - Part 2</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.10 - Presentation for Parents - Part 3.html" rel="noopener" target="_blank"><span class="num">4.10</span><span>Presentation for Parents - Part 3</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.11 - Activities with Children - Part 1.html" rel="noopener" target="_blank"><span class="num">4.11</span><span>Activities with Children - Part 1</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.12_-_Implementing_Innovative_Approaches_in_Working_with_Children.html" rel="noopener" target="_blank"><span class="num">4.12</span><span>- Implementing Innovative Approaches in Working with Children</span><span aria-hidden="true" class="arr">↗</span></a></li>
+<li><a href="4.13 - Activities with Children - Part 3.html" rel="noopener" target="_blank"><span class="num">4.13</span><span>Activities with Children - Part 3</span><span aria-hidden="true" class="arr">↗</span></a></li></ol></details><footer>Project 2025-1-BG01-KA122-SCH-000334045 · Funded by the European Union</footer></main></body></html>
